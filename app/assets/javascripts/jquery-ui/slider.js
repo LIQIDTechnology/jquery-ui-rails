@@ -67,8 +67,8 @@ return $.widget( "ui.slider", $.ui.mouse, {
 		this.element
 			.addClass( "ui-slider" +
 				" ui-slider-" + this.orientation +
-				" ui-widget" +
-				" ui-widget-content" +
+				" ex-widget" +
+				" ex-widget-content" +
 				" ui-corner-all");
 
 		this._refresh();
@@ -133,7 +133,7 @@ return $.widget( "ui.slider", $.ui.mouse, {
 				classes = "ui-slider-range" +
 				// note: this isn't the most fittingly semantic framework class for this element,
 				// but worked best visually with a variety of themes
-				" ui-widget-header ui-corner-all";
+				" ex-widget-header ui-corner-all";
 			} else {
 				this.range.removeClass( "ui-slider-range-min ui-slider-range-max" )
 					// Handle range switching from true to min/max
@@ -170,8 +170,8 @@ return $.widget( "ui.slider", $.ui.mouse, {
 			.removeClass( "ui-slider" +
 				" ui-slider-horizontal" +
 				" ui-slider-vertical" +
-				" ui-widget" +
-				" ui-widget-content" +
+				" ex-widget" +
+				" ex-widget-content" +
 				" ui-corner-all" );
 
 		this._mouseDestroy();

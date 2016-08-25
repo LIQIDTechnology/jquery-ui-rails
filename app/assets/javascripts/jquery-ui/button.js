@@ -28,7 +28,7 @@
 }(function( $ ) {
 
 var lastActive,
-	baseClasses = "ui-button ui-widget ui-state-default ui-corner-all",
+	baseClasses = "ui-button ex-widget ui-state-default ui-corner-all",
 	typeClasses = "ui-button-icons-only ui-button-icon-only ui-button-text-icons ui-button-text-icon-primary ui-button-text-icon-secondary ui-button-text-only",
 	formResetHandler = function() {
 		var form = $( this );

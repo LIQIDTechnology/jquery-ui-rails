@@ -59,7 +59,7 @@ return $.widget( "ui.menu", {
 		this.mouseHandled = false;
 		this.element
 			.uniqueId()
-			.addClass( "ui-menu ui-widget ui-widget-content" )
+			.addClass( "ui-menu ex-widget ex-widget-content" )
 			.toggleClass( "ui-menu-icons", !!this.element.find( ".ui-icon" ).length )
 			.attr({
 				role: this.options.role,
@@ -158,7 +158,7 @@ return $.widget( "ui.menu", {
 		this.element
 			.removeAttr( "aria-activedescendant" )
 			.find( ".ui-menu" ).addBack()
-				.removeClass( "ui-menu ui-widget ui-widget-content ui-menu-icons ui-front" )
+				.removeClass( "ui-menu ex-widget ex-widget-content ui-menu-icons ui-front" )
 				.removeAttr( "role" )
 				.removeAttr( "tabIndex" )
 				.removeAttr( "aria-labelledby" )
@@ -186,7 +186,7 @@ return $.widget( "ui.menu", {
 			});
 
 		// Destroy menu dividers
-		this.element.find( ".ui-menu-divider" ).removeClass( "ui-menu-divider ui-widget-content" );
+		this.element.find( ".ui-menu-divider" ).removeClass( "ui-menu-divider ex-widget-content" );
 	},
 
 	_keydown: function( event ) {
@@ -289,7 +289,7 @@ return $.widget( "ui.menu", {
 
 		// Initialize nested menus
 		submenus.filter( ":not(.ui-menu)" )
-			.addClass( "ui-menu ui-widget ui-widget-content ui-front" )
+			.addClass( "ui-menu ex-widget ex-widget-content ui-front" )
 			.hide()
 			.attr({
 				role: this.options.role,
@@ -316,7 +316,7 @@ return $.widget( "ui.menu", {
 		items.not( ".ui-menu-item" ).each(function() {
 			var item = $( this );
 			if ( that._isDivider( item ) ) {
-				item.addClass( "ui-widget-content ui-menu-divider" );
+				item.addClass( "ex-widget-content ui-menu-divider" );
 			}
 		});
 

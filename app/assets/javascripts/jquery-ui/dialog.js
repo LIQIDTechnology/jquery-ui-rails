@@ -121,7 +121,7 @@ return $.widget( "ui.dialog", {
 		this.element
 			.show()
 			.removeAttr( "title" )
-			.addClass( "ui-dialog-content ui-widget-content" )
+			.addClass( "ui-dialog-content ex-widget-content" )
 			.appendTo( this.uiDialog );
 
 		this._createTitlebar();
@@ -162,7 +162,7 @@ return $.widget( "ui.dialog", {
 
 		this.element
 			.removeUniqueId()
-			.removeClass( "ui-dialog-content ui-widget-content" )
+			.removeClass( "ui-dialog-content ex-widget-content" )
 			.css( this.originalCss )
 			// Without detaching first, the following becomes really slow
 			.detach();
@@ -335,7 +335,7 @@ return $.widget( "ui.dialog", {
 
 	_createWrapper: function() {
 		this.uiDialog = $("<div>")
-			.addClass( "ui-dialog ui-widget ui-widget-content ui-corner-all ui-front " +
+			.addClass( "ui-dialog ex-widget ex-widget-content ui-corner-all ui-front " +
 				this.options.dialogClass )
 			.hide()
 			.attr({
@@ -395,7 +395,7 @@ return $.widget( "ui.dialog", {
 		var uiDialogTitle;
 
 		this.uiDialogTitlebar = $( "<div>" )
-			.addClass( "ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" )
+			.addClass( "ui-dialog-titlebar ex-widget-header ui-corner-all ui-helper-clearfix" )
 			.prependTo( this.uiDialog );
 		this._on( this.uiDialogTitlebar, {
 			mousedown: function( event ) {
@@ -449,7 +449,7 @@ return $.widget( "ui.dialog", {
 
 	_createButtonPane: function() {
 		this.uiDialogButtonPane = $( "<div>" )
-			.addClass( "ui-dialog-buttonpane ui-widget-content ui-helper-clearfix" );
+			.addClass( "ui-dialog-buttonpane ex-widget-content ui-helper-clearfix" );
 
 		this.uiButtonSet = $( "<div>" )
 			.addClass( "ui-dialog-buttonset" )
@@ -849,7 +849,7 @@ return $.widget( "ui.dialog", {
 		}
 
 		this.overlay = $( "<div>" )
-			.addClass( "ui-widget-overlay ui-front" )
+			.addClass( "ex-widget-overlay ui-front" )
 			.appendTo( this._appendTo() );
 		this._on( this.overlay, {
 			mousedown: "_keepFocus"

@@ -65,7 +65,7 @@ return $.widget( "ui.accordion", {
 	_create: function() {
 		var options = this.options;
 		this.prevShow = this.prevHide = $();
-		this.element.addClass( "ui-accordion ui-widget ui-helper-reset" )
+		this.element.addClass( "ui-accordion ex-widget ui-helper-reset" )
 			// ARIA
 			.attr( "role", "tablist" );
 
@@ -114,7 +114,7 @@ return $.widget( "ui.accordion", {
 
 		// clean up main element
 		this.element
-			.removeClass( "ui-accordion ui-widget ui-helper-reset" )
+			.removeClass( "ui-accordion ex-widget ui-helper-reset" )
 			.removeAttr( "role" );
 
 		// clean up headers
@@ -132,7 +132,7 @@ return $.widget( "ui.accordion", {
 
 		// clean up content panels
 		contents = this.headers.next()
-			.removeClass( "ui-helper-reset ui-widget-content ui-corner-bottom " +
+			.removeClass( "ui-helper-reset ex-widget-content ui-corner-bottom " +
 				"ui-accordion-content ui-accordion-content-active ui-state-disabled" )
 			.css( "display", "" )
 			.removeAttr( "role" )
@@ -269,7 +269,7 @@ return $.widget( "ui.accordion", {
 			.addClass( "ui-accordion-header ui-state-default ui-corner-all" );
 
 		this.panels = this.headers.next()
-			.addClass( "ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" )
+			.addClass( "ui-accordion-content ui-helper-reset ex-widget-content ui-corner-bottom" )
 			.filter( ":not(.ui-accordion-content-active)" )
 			.hide();
 

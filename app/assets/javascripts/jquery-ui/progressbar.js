@@ -44,7 +44,7 @@ return $.widget( "ui.progressbar", {
 		this.oldValue = this.options.value = this._constrainedValue();
 
 		this.element
-			.addClass( "ui-progressbar ui-widget ui-widget-content ui-corner-all" )
+			.addClass( "ui-progressbar ex-widget ex-widget-content ui-corner-all" )
 			.attr({
 				// Only set static values, aria-valuenow and aria-valuemax are
 				// set inside _refreshValue()
@@ -52,7 +52,7 @@ return $.widget( "ui.progressbar", {
 				"aria-valuemin": this.min
 			});
 
-		this.valueDiv = $( "<div class='ui-progressbar-value ui-widget-header ui-corner-left'></div>" )
+		this.valueDiv = $( "<div class='ui-progressbar-value ex-widget-header ui-corner-left'></div>" )
 			.appendTo( this.element );
 
 		this._refreshValue();
@@ -60,7 +60,7 @@ return $.widget( "ui.progressbar", {
 
 	_destroy: function() {
 		this.element
-			.removeClass( "ui-progressbar ui-widget ui-widget-content ui-corner-all" )
+			.removeClass( "ui-progressbar ex-widget ex-widget-content ui-corner-all" )
 			.removeAttr( "role" )
 			.removeAttr( "aria-valuemin" )
 			.removeAttr( "aria-valuemax" )
