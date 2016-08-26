@@ -77,7 +77,7 @@ return $.widget( "ui.tabs", {
 		this.running = false;
 
 		this.element
-			.addClass( "ui-tabs ex-widget ex-widget-content ui-corner-all" )
+			.addClass( "ui-tabs ex-widget ex-widget-content ex-corner-all" )
 			.toggleClass( "ui-tabs-collapsible", options.collapsible );
 
 		this._processTabs();
@@ -382,7 +382,7 @@ return $.widget( "ui.tabs", {
 			prevPanels = this.panels;
 
 		this.tablist = this._getList()
-			.addClass( "ui-tabs-nav ui-helper-reset ui-helper-clearfix ex-widget-header ui-corner-all" )
+			.addClass( "ui-tabs-nav ui-helper-reset ui-helper-clearfix ex-widget-header ex-corner-all" )
 			.attr( "role", "tablist" )
 
 			// Prevent users from focusing disabled tabs via click
@@ -715,10 +715,10 @@ return $.widget( "ui.tabs", {
 			this.xhr.abort();
 		}
 
-		this.element.removeClass( "ui-tabs ex-widget ex-widget-content ui-corner-all ui-tabs-collapsible" );
+		this.element.removeClass( "ui-tabs ex-widget ex-widget-content ex-corner-all ui-tabs-collapsible" );
 
 		this.tablist
-			.removeClass( "ui-tabs-nav ui-helper-reset ui-helper-clearfix ex-widget-header ui-corner-all" )
+			.removeClass( "ui-tabs-nav ui-helper-reset ui-helper-clearfix ex-widget-header ex-corner-all" )
 			.removeAttr( "role" );
 
 		this.anchors

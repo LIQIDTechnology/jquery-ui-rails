@@ -335,7 +335,7 @@ return $.widget( "ui.dialog", {
 
 	_createWrapper: function() {
 		this.uiDialog = $("<div>")
-			.addClass( "ui-dialog ex-widget ex-widget-content ui-corner-all ui-front " +
+			.addClass( "ui-dialog ex-widget ex-widget-content ex-corner-all ui-front " +
 				this.options.dialogClass )
 			.hide()
 			.attr({
@@ -395,7 +395,7 @@ return $.widget( "ui.dialog", {
 		var uiDialogTitle;
 
 		this.uiDialogTitlebar = $( "<div>" )
-			.addClass( "ui-dialog-titlebar ex-widget-header ui-corner-all ui-helper-clearfix" )
+			.addClass( "ui-dialog-titlebar ex-widget-header ex-corner-all ui-helper-clearfix" )
 			.prependTo( this.uiDialog );
 		this._on( this.uiDialogTitlebar, {
 			mousedown: function( event ) {

@@ -120,7 +120,7 @@ return $.widget( "ui.accordion", {
 		// clean up headers
 		this.headers
 			.removeClass( "ui-accordion-header ui-accordion-header-active ui-state-default " +
-				"ui-corner-all ui-state-active ui-state-disabled ui-corner-top" )
+				"ex-corner-all ui-state-active ui-state-disabled ui-corner-top" )
 			.removeAttr( "role" )
 			.removeAttr( "aria-expanded" )
 			.removeAttr( "aria-selected" )
@@ -266,7 +266,7 @@ return $.widget( "ui.accordion", {
 			prevPanels = this.panels;
 
 		this.headers = this.element.find( this.options.header )
-			.addClass( "ui-accordion-header ui-state-default ui-corner-all" );
+			.addClass( "ui-accordion-header ui-state-default ex-corner-all" );
 
 		this.panels = this.headers.next()
 			.addClass( "ui-accordion-content ui-helper-reset ex-widget-content ui-corner-bottom" )
@@ -288,7 +288,7 @@ return $.widget( "ui.accordion", {
 
 		this.active = this._findActive( options.active )
 			.addClass( "ui-accordion-header-active ui-state-active ui-corner-top" )
-			.removeClass( "ui-corner-all" );
+			.removeClass( "ex-corner-all" );
 		this.active.next()
 			.addClass( "ui-accordion-content-active" )
 			.show();
@@ -452,7 +452,7 @@ return $.widget( "ui.accordion", {
 
 		if ( !clickedIsActive ) {
 			clicked
-				.removeClass( "ui-corner-all" )
+				.removeClass( "ex-corner-all" )
 				.addClass( "ui-accordion-header-active ui-state-active ui-corner-top" );
 			if ( options.icons ) {
 				clicked.children( ".ui-accordion-header-icon" )
@@ -580,7 +580,7 @@ return $.widget( "ui.accordion", {
 			.removeClass( "ui-accordion-content-active" )
 			.prev()
 				.removeClass( "ui-corner-top" )
-				.addClass( "ui-corner-all" );
+				.addClass( "ex-corner-all" );
 
 		// Work around for rendering bug in IE (#5421)
 		if ( toHide.length ) {

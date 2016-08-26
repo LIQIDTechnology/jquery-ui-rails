@@ -220,7 +220,7 @@ return $.widget( "ui.spinner", {
 		this.buttons = uiSpinner.find( ".ui-spinner-button" )
 			.attr( "tabIndex", -1 )
 			.button()
-			.removeClass( "ui-corner-all" );
+			.removeClass( "ex-corner-all" );
 
 		// IE 6 doesn't understand height: 50% for the buttons
 		// unless the wrapper has an explicit height
@@ -258,7 +258,7 @@ return $.widget( "ui.spinner", {
 	},
 
 	_uiSpinnerHtml: function() {
-		return "<span class='ui-spinner ex-widget ex-widget-content ui-corner-all'></span>";
+		return "<span class='ui-spinner ex-widget ex-widget-content ex-corner-all'></span>";
 	},
 
 	_buttonHtml: function() {

@@ -420,7 +420,7 @@ return $.widget( "ui.tooltip", {
 	_tooltip: function( element ) {
 		var tooltip = $( "<div>" )
 				.attr( "role", "tooltip" )
-				.addClass( "ui-tooltip ex-widget ui-corner-all ex-widget-content " +
+				.addClass( "ui-tooltip ex-widget ex-corner-all ex-widget-content " +
 					( this.options.tooltipClass || "" ) ),
 			id = tooltip.uniqueId().attr( "id" );
 
